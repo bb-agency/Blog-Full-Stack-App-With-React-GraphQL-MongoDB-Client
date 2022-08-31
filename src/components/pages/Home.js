@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import "./style.css";
 
 const Home = () => {
   const [users, setUser] = useState([]);
@@ -26,10 +27,7 @@ const Home = () => {
                 <td>{user.password}</td>
                 <td>{user.email}</td>
                 <td>
-                  <Link
-                    class="btn btn-outline-primary mr-2"
-                    to={`/users/edit/${user._id}`}
-                  >
+                  <Link class="btn btn-outline-primary mr-2" to={`/users/edit/${user._id}`}>
                     Edit
                   </Link>
                   <Link
